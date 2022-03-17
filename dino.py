@@ -97,7 +97,7 @@ def main_func():
 
 def take_screen(idx):
     val = int(idx)
-    im2 = pyautogui.screenshot('rino.png' , region = (215 + val,556,225,100))  # image name will be as per parameter
+    im2 = pyautogui.screenshot('rino.png' , region = (230 + val,556,225,100))  # image name will be as per parameter
     width = 215 + val
     height = 100
     width, height = im2.size
@@ -106,10 +106,11 @@ def take_screen(idx):
     if (83,83,83) in p:
         pyautogui.press("space")
         #time.sleep(0.05)
-        #pyautogui.press("down")
+        
 time.sleep(5)
+pyautogui.press("space")
 print("Start")
-idx = 10
+idx = 0
 while True:
-    idx = idx + 0.25
+    idx = idx + 0.35
     take_screen(idx)
